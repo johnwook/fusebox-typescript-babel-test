@@ -13,7 +13,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./out"),
-    filename: "tsWithWebpack.js"
+    filename: "tsWithBabelWithWebpack.js"
   },
   module: {
     rules: [

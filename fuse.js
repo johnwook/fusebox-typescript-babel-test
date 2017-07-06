@@ -19,7 +19,7 @@ const babelOnly = fuse
   .target("electron")
   .instructions(`> [index.jsx]`);
 const tsWithBabel = fuse
-  .bundle("tsWithBabel")
+  .bundle("tsWithBabelWithFuseBox")
   .target("electron")
   .instructions(`> [index.tsx]`);
 
