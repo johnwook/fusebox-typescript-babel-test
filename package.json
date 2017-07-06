@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:johnwook/fusebox-typescript-babel-test.git",
   "author": "Johnwook Choi <johnwook.choi@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
