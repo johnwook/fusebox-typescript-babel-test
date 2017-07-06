@@ -8,15 +8,19 @@ const fuse = FuseBox.init({
       config: {
         sourceMaps: true,
         presets: ["es2015"],
-        plugins: [
-            ["transform-react-jsx"],
-        ],
-      },
+        plugins: [["transform-react-jsx"]]
+      }
     })
   ]
 });
 
-const babelOnly = fuse.bundle("babelOnly").target("electron").instructions(`> [index.jsx]`);
-const tsWithBabel = fuse.bundle("tsWithBabel").target("electron").instructions(`> [index.tsx]`);
+const babelOnly = fuse
+  .bundle("babelOnly")
+  .target("electron")
+  .instructions(`> [index.jsx]`);
+const tsWithBabel = fuse
+  .bundle("tsWithBabel")
+  .target("electron")
+  .instructions(`> [index.tsx]`);
 
 fuse.run();

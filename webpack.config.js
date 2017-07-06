@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require("path");
+var webpack = require("webpack");
 
 var babelOptions = {
   sourceMaps: true,
@@ -9,28 +9,30 @@ var babelOptions = {
 
 module.exports = {
   entry: {
-    main: './src/index.tsx',
+    main: "./src/index.tsx"
   },
   output: {
-    path: path.resolve(__dirname, './out'),
-    filename: 'tsWithWebpack.js',
+    path: path.resolve(__dirname, "./out"),
+    filename: "tsWithWebpack.js"
   },
   module: {
-    rules: [{
-      test: /\.ts(x?)$/,
-      exclude: /node_modules/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: babelOptions
-        },
-        {
-          loader: 'ts-loader'
-        }
-      ]
-    }]
+    rules: [
+      {
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: babelOptions
+          },
+          {
+            loader: "ts-loader"
+          }
+        ]
+      }
+    ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
-  },
+    extensions: [".ts", ".tsx", ".js"]
+  }
 };
